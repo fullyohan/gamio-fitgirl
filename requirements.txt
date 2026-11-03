@@ -1,0 +1,11 @@
+aiosqlite
+beautifulsoup4
+fastapi
+httpx
+loguru
+pydantic-settings
+sqlmodel
+uvicorn
+
+python-dotenv
+sqlalchemy
