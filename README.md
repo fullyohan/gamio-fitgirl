@@ -97,12 +97,3 @@ curl -X POST http://localhost:8000/sync \\
 ```
 
 Requests without a valid token are rejected.
-
-## Tech Stack
-
-- Python
-- FastAPI
-- Uvicorn
-- BeautifulSoup
-- SQLModel
-- python-dotenv

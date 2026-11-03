@@ -5,8 +5,7 @@ from db.database import get_session
 from models.game import GameSearchItem, MagnetItem
 from services.game_service import GameService
 
-router = APIRouter(prefix="/games", tags=["Games"])
-
+router = APIRouter(prefix="", tags=["Games"])
 
 @router.get("/search", response_model=List[GameSearchItem])
 async def search_games(
@@ -17,7 +16,7 @@ async def search_games(
     return [GameSearchItem(slug=g.slug, title=g.title, date=g.date) for g in games]
 
 
-@router.get("/{slug}", response_model=List[MagnetItem])
+@router.get("/magnets/{slug}", response_model=List[MagnetItem])
 async def get_game_by_slug(
         slug: str,
         session: AsyncSession = Depends(get_session)
